@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import Bezier from "./bezier";
 import Point from "./point"
 
@@ -20,7 +21,7 @@ export default class SignaturePad extends React.Component {
   }
 
   componentDidMount() {
-    this._canvas = React.findDOMNode(this.refs.cv);
+    this._canvas = ReactDOM.findDOMNode(this.refs.cv);
     this._ctx = this._canvas.getContext("2d");
     this.clear();
 

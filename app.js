@@ -1,7 +1,7 @@
-import React from "react";
+import ReactDOM from "react-dom";
 import SignaturePad from "./src/index";
 
-React.render(
+ReactDOM.render(
   <SignaturePad clearButton="true" />,
   document.body
 )
