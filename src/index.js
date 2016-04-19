@@ -106,7 +106,7 @@ export default class SignaturePad extends React.Component {
 
     this._canvas.addEventListener("touchstart", this._handleTouchStart.bind(this));
     this._canvas.addEventListener("touchmove", this._handleTouchMove.bind(this));
-    document.addEventListener("touchend", this._handleTouchEnd.bind(this));
+    this._canvas.addEventListener("touchend", this._handleTouchEnd.bind(this));
   };
 
   off() {
@@ -116,7 +116,7 @@ export default class SignaturePad extends React.Component {
 
     this._canvas.removeEventListener("touchstart", this._handleTouchStart);
     this._canvas.removeEventListener("touchmove", this._handleTouchMove);
-    document.removeEventListener("touchend", this._handleTouchEnd);
+    this._canvas.removeEventListener("touchend", this._handleTouchEnd);
 
     window.removeEventListener("resize", this._resizeCanvas);
   }
